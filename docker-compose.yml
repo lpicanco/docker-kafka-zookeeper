@@ -1,0 +1,13 @@
+kafka:
+  image: 'ches/kafka:latest'
+  hostname: kafka
+  links:
+    - zookeeper
+  ports:
+    - '9092:9092'
+zookeeper:
+  image: 'jplock/zookeeper:latest'
+  ports:
+    - '2181:2181'
+    - '2888:2888'
+    - '3888:3888'
